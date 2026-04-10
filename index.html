@@ -57,62 +57,28 @@ margin:20px;
 <body>
 
 <header>
-<h1>Smart Code Dictionary</h1>
-<p>قاموس برمجي يساعدك تتعلم المصطلحات بسهولة</p>
-</header>
+<h1>🔥 جرّب القاموس قبل الشراء</h1>
 
-<div class="container">
-
-<div class="box">📚 أكثر من 200 مصطلح</div>
-<div class="box">💻 أمثلة كود لكل مصطلح</div>
-<div class="box">🧠 اختبار تفاعلي</div>
-
-<div class="price">السعر: 3 دينار فقط</div>
-
-<button onclick="buy()">شراء الآن</button>
-
-</div>
-
-<script>
-function buy(){
-alert("تواصل عبر الايميل للشراء");
-window.location.href = "mailto:badreaam1@gmail.com";
-}
-</script>
-
-</body>
-  
-
-<h2 style="text-align:center;color:white;">🔥 جرّب القاموس قبل الشراء</h2>
-
-<div style="text-align:center;margin-top:20px;">
-
-<input id="search" placeholder="اكتب مصطلح مثل API"
-style="padding:10px;width:70%;font-size:18px;border-radius:8px;border:none;">
+<input id="search" placeholder="اكتب API أو Firewall"
+style="padding:10px;width:70%;font-size:18px;">
 
 <br><br>
 
-<button onclick="searchTerm()" style="padding:10px 20px;">
-بحث
-</button>
-
-<br><br>
-
-<button onclick="quick('api')">API</button>
-<button onclick="quick('firewall')">Firewall</button>
-<button onclick="quick('array')">Array</button>
+<button onclick="searchTerm()">بحث</button>
 
 <div id="result" style="margin-top:20px;font-size:20px;color:#22c55e;"></div>
 
-<br><br>
+<hr>
+
+<h2>💰 شراء المنتج</h2>
+
+<p>قاموس برمجي مع أمثلة + شرح + اختبار</p>
 
 <a href="mailto:youremail@gmail.com">
-<button style="background:#22c55e;padding:15px 30px;font-size:20px;">
-اشتر الآن بعد التجربة 💰
+<button style="padding:15px 30px;font-size:18px;background:#22c55e;border:none;">
+اشتر الآن
 </button>
 </a>
-
-</div>
 
 <script>
 function searchTerm(){
@@ -121,18 +87,13 @@ let input = document.getElementById("search").value.toLowerCase();
 let data = {
 "api": "API: وسيلة ربط بين الأنظمة",
 "firewall": "Firewall: جدار حماية للشبكات",
-"array": "Array: تخزين مجموعة بيانات"
+"array": "Array: تخزين بيانات متعددة"
 };
 
 document.getElementById("result").innerText =
 data[input] || "غير موجود حالياً";
 }
-
-function quick(word){
-document.getElementById("search").value = word;
-searchTerm();
-}
 </script>
 
+</body>
 </html>
-
